@@ -1,0 +1,13 @@
+body {
+    --culoare1: #f097e1;
+    --spatiere: 200px;
+    padding-left: var(--spatiere);
+    padding-right: var(--spatiere);
+}
+p{
+    color:red;
+    border:1px solid var(--culoare1);
+}
+h2{
+    background-color: var(--culoare1);
+}
