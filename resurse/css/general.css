@@ -8,69 +8,71 @@ body{
   --culoare-text:black;
   --culoare-text-selectat:white;
 
-  --spatiere:100px;
+  --spatiere:50px;
   padding-left:var(--spatiere);
   padding-right:var(--spatiere);
   margin-left:10px;
   margin-right:10px;
 }
 #link-top{
-    position:fixed;
-    bottom:0.3em;
-    opacity:0.5;
-    left:0.3em;
-    width:3rem;
-    box-sizing: border-box;
-    height:3rem;
-    line-height:3rem;
-    text-align:center;
-    border:5px solid var(--culoare4);
-      border-top-color:var(--culoare3);
-    border-radius:50%;
-    background: var(--culoare-text-selectat);
-    box-shadow: 0px 0px 10px 5px var(--culoare1);
-    text-decoration: none;
+  position:fixed;
+  bottom:0.3em;
+  opacity:0.5;
+  left:0.3em;
+  width:3rem;
+  box-sizing: border-box;
+  height:3rem;
+  line-height:3rem;
+  text-align:center;
+  border:5px solid var(--culoare4);
+  border-top-color:var(--culoare3);
+  border-radius:50%;
+  background: var(--culoare-text-selectat);
+  box-shadow: 0px 0px 10px 5px var(--culoare1);
+  text-decoration: none;
+  transition: all 1s linear;
 }
-  #link-top:hover{
-    opacity:1;
-  }
-  #triunghi{
-  /*  height:0px;
-    width:0;*/
-    display:inline-block;
-    /*border-bottom:1.5rem solid black;
-    border-left:1rem solid transparent;
-    border-right:1rem solid transparent;*/
-    vertical-align: top;
-    transform: scale(5);
-    transform: translateY(-10%);
-   /* transition: transform all 1s linear;
-    transition: transform border-bottom 1s linear;*/
-    
-  }
-  #link-top:hover>#triunghi{
-  /*  transform : rotate(90deg); */
-    transform: translateY(-10%);
-   /* border-bottom: 1.5rem solid aqua;*/
-  }
-  #tabel{
+#link-top:hover{
+  opacity:1;
+  border-bottom:1.5rem solid var(--culoare-deschisa);
+  border-left:1rem solid transparent;
+  border-right:1rem solid transparent;
+  transform: translateY(-20%);
+}
+#triunghi{
+  height: 15px;
+  width:0;
+  display:inline-block;
+  border-bottom:1.5rem solid black;
+  border-left:1rem solid transparent;
+  border-right:1rem solid transparent;
+  vertical-align: top;
+  transform: scale(5);
+  transform: translateY(-20%);
+  transition: all 1s linear;
+}
+#link-top:hover>#triunghi{
+  transform : rotate(90deg);
+  transform: translateY(-10%);
+}
+#tabel{
     border-spacing:0px;
     border-collapse:collapse;
   }
   
-  #tabel th,#tabel td{
+#tabel th,#tabel td{
     border:3px solid var(--culoare-text);
   }
-  #tabel th:nth-child(2n){
+#tabel th:nth-child(2n){
     background-color: var(--culoare3);
   }
-  /* Stil pentru bordurile care au în stânga o celulă cu număr par și în dreapta o celulă cu număr impar */
+
 #tabel th:nth-child(2n) + th,
 #tabel td:nth-child(2n) + td {
     border-right-color: var(--culoare1);
 }
 
-/* Stil pentru bordurile care au în stânga o celulă cu număr impar și în dreapta o celulă cu număr par */
+
 #tabel th:nth-child(2n+1) + th,
 #tabel td:nth-child(2n+1) + td {
     border-right-color: var(--culoare2); 
@@ -78,58 +80,81 @@ body{
 
 
 
+
 #tabel thead th,
 #tabel tfoot th,
 #tabel tbody td {
-  border: 2px solid var(--culoare-text); /* Grosimea border-ului pentru celelalte celule */
+  border: 2px solid var(--culoare-text); 
 }
 
 #tabel thead th:first-child,
 #tabel tbody tr:last-child td,
 #tabel tbody tr:nth-last-child(2) td {
-  border-bottom-width: 4px; /* Grosimea border-ului pentru ultimul rând din thead și tbody */
+  border-bottom-width: 4px; 
 }
 
 #tabel thead th,
 #tabel tbody tr:first-child td,
 #tabel tfoot th {
-  border-top-width: 4px; /* Grosimea border-ului pentru primul rând din thead și tbody și toate rândurile din tfoot */
+  border-top-width: 4px; 
 }
 
+#tabel th:hover{
+  color:var(--culoare2);
+  background-color:var(--culoare-text-selectat);
+  border:5px solid var(--culoare-text);
+  transition:all 0.5s linear;
+}
 
+#tabel tr:hover{
+  color:var(--culoare2);
+  background-color:var(--culoare-text-selectat);
+  border:5px solid var(--culoare-text);
+  transition:all 0.5s linear;
+}
 
-
-  .container-iframe{
+@media screen and (max-width:1200px)
+{
+  #tabeloroar{
+    overflow-x:auto;
+    max-width:250px;
+  }
+}
+@media screen and (max-width:800px)
+{
+  #tabeloroar{
+    overflow-x:auto;
+    max-width:250px;
+  }
+}
+.container-iframe{
     display: flex;
-    flex-direction:column;
-
-      display: flex;
-      justify-content: center; /* pentru a centra pe orizontală */
-      align-items: center; /* pentru a centra pe verticală */
-    
-  }
-
-  .taburi-iframe{
-    display:flex;
     flex-direction:row-reverse;
-    justify-content:flex; /*le muta jos*/
-  }
-  .taburi-iframe>a{
-    display:block;
-    border:1px solid var(--culoare4);
-    background-color:var(--culoare-text-selectat);
-    margin-bottom:0.4em;
-    padding:0.6em;
-  }
-  .taburi-iframe>a:last-child{
-    margin-bottom:0;
-  }
-  #welcome, #utilizatori, #statistici, #site, #evenimente, #anunturi, #diverse {
-   
-    padding: 0.5em; 
-    margin-bottom: 5px;
-    margin-top: 5px;
-    display: inline-block;
-    border-radius: 10px;
-
+    width:40%;
+    height: 30%;
+    margin-left:auto;
+    margin-right:auto;
+    border: 5px solid var(--culoare-text);
+    border-radius:5px;
 }
+.tab2{
+  margin-top:3.3em
+}
+
+.taburi-iframe>a{
+    display:flex;
+    position:absolute;
+    flex-direction:column-reverse;
+    justify-content: flex-end;
+    transition: all 1s linear;
+    margin-left:5px;
+    border: 5px solid var(--culoare3);
+    border-radius: 3px;
+    background-color: var(--culoare4);
+    text-decoration:none;
+    padding:10px;
+  }
+.taburi-iframe>a:hover{
+    padding-left:25px;
+    background-color: var(--culoare-deschisa);
+  }
