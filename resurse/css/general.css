@@ -1,3 +1,19 @@
+body{
+  --culoare1:#2357DB;
+  --culoare2:#379BDE;
+  --culoare3:#6723DB;
+  --culoare4:#6B8BDB;
+  --culoare-inchisa:#2923DB;
+  --culoare-deschisa:#4BD2DE;
+  --culoare-text:black;
+  --culoare-text-selectat:white;
+
+  --spatiere:100px;
+  padding-left:var(--spatiere);
+  padding-right:var(--spatiere);
+  margin-left:10px;
+  margin-right:10px;
+}
 #link-top{
     position:fixed;
     bottom:0.3em;
@@ -8,11 +24,11 @@
     height:3rem;
     line-height:3rem;
     text-align:center;
-    border:5px solid grey;
-      border-top-color:red;
+    border:5px solid var(--culoare4);
+      border-top-color:var(--culoare3);
     border-radius:50%;
-    background: rgb(220,220,220);
-    box-shadow: 0px 0px 10px 5px blue;
+    background: var(--culoare-text-selectat);
+    box-shadow: 0px 0px 10px 5px var(--culoare1);
     text-decoration: none;
 }
   #link-top:hover{
@@ -37,13 +53,82 @@
     transform: translateY(-10%);
    /* border-bottom: 1.5rem solid aqua;*/
   }
-  #tab-orar{
+  #tabel{
     border-spacing:0px;
     border-collapse:collapse;
   }
-  #tab-orar th,#tab-orar td{
-    border:3px solid black;
+  #tabel th,#tabel td{
+    border:3px solid var(--culoare-text);
   }
-  #tab-orar th:nth-child(2n){
-    background-color: red;
+  #tabel th:nth-child(2n){
+    background-color: var(--culoare3);
   }
+  /* Stil pentru bordurile care au în stânga o celulă cu număr par și în dreapta o celulă cu număr impar */
+#tabel th:nth-child(2n) + th,
+#tabel td:nth-child(2n) + td {
+    border-right-color: var(--culoare1);
+}
+
+/* Stil pentru bordurile care au în stânga o celulă cu număr impar și în dreapta o celulă cu număr par */
+#tabel th:nth-child(2n+1) + th,
+#tabel td:nth-child(2n+1) + td {
+    border-right-color: var(--culoare2); 
+}
+
+
+
+#tabel thead th,
+#tabel tfoot th,
+#tabel tbody td {
+  border: 2px solid var(--culoare-text); /* Grosimea border-ului pentru celelalte celule */
+}
+
+#tabel thead th:first-child,
+#tabel tbody tr:last-child td,
+#tabel tbody tr:nth-last-child(2) td {
+  border-bottom-width: 4px; /* Grosimea border-ului pentru ultimul rând din thead și tbody */
+}
+
+#tabel thead th,
+#tabel tbody tr:first-child td,
+#tabel tfoot th {
+  border-top-width: 4px; /* Grosimea border-ului pentru primul rând din thead și tbody și toate rândurile din tfoot */
+}
+
+
+
+
+  .container-iframe{
+    display: flex;
+    flex-direction:row-reverse;
+
+      display: flex;
+      justify-content: center; /* pentru a centra pe orizontală */
+      align-items: center; /* pentru a centra pe verticală */
+    
+  }
+
+  .taburi-iframe{
+    display:flex;
+    flex-direction:column-reverse;
+    justify-content:flex; /*le muta jos*/
+  }
+  .taburi-iframe>a{
+    display:block;
+    border:1px solid var(--culoare4);
+    background-color:var(--culoare-text-selectat);
+    margin-bottom:0.4em;
+    padding:0.6em;
+  }
+  .taburi-iframe>a:last-child{
+    margin-bottom:0;
+  }
+  #welcome, #utilizatori, #statistici, #site, #evenimente, #anunturi, #diverse {
+    border: 2px solid var(--culoare-text); 
+    padding: 0.5em; 
+    margin-bottom: 5px;
+    margin-top: 5px;
+    display: inline-block;
+    border-radius: 10px;
+
+}

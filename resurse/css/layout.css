@@ -4,24 +4,24 @@ html{
     font-weight: 400;
     font-style: normal;
 }
-
+/*
 
 #grid-pagina{
     display: grid;
     gap: 10px;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-areas: "welcome welcome welcome"
-                         "promotii promotii orar"
-                         "fig1 produse produse"
-                         "fig2 produse produse"
-                         "fig3 produse produse"
-                         "index-intrebari index-intrebari index-intrebari"
-                         "anunturi anunturi anunturi";
+    grid-template-columns: repeat(3, 1fr); /Modificați numărul de coloane de la 4 la 3 
+    grid-template-areas: 
+        "welcome welcome welcome"
+        "utilizatori statistici site"
+        "evenimente evenimente tabel"
+        "anunturi anunturi anunturi"
+        "diverse diverse diverse";
 }
 
 
+
 #grid-pagina>*{
-    outline: 2px solid skyblue;
+    outline: 2px solid var(--culoare1);
     padding: 1em;
 }
 
@@ -33,50 +33,91 @@ html{
 #welcome{
     grid-area: welcome;
 }
-#promotii{
-    grid-area: promotii;
+#utilizatori{
+    grid-area: utilizatori;
 }
 #anunturi{
     grid-area: anunturi;
 }
-#orar{
-    grid-area: orar;
+#site{
+    grid-area: site;
 }
  
-#fig1{
-    grid-area: fig1;
+#statistici{
+    grid-area: statistici;
 }
-#fig2{
-    grid-area: fig2;
+#evenimente{
+    grid-area: evenimente;
 }
-#fig3{
-    grid-area: fig3;
+#tabel{
+    grid-area: tabel;
 }
-#produse{
-    grid-area: produse;
+#diverse{
+    grid-area: diverse;
 }
-#index-intrebari{
-    grid-area: index-intrebari;
+*/#grid-pagina {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+        "welcome welcome welcome welcome"
+        "welcome welcome welcome welcome"
+        "utilizatori statistici statistici site"
+        "evenimente evenimente tabel tabel"
+        "anunturi anunturi tabel tabel"
+        "diverse diverse diverse diverse";
 }
 
+#grid-pagina > * {
+    padding: 1em;
+    outline: 2px solid var(--culoare1);
+}
 
-.intro-oferte{
-    font-size: 1.5rem;
+#welcome {
+    grid-area: welcome;
 }
-.farfurie{
-    width: 50%;
+
+#utilizatori {
+    grid-area: utilizatori;
 }
+
+#statistici {
+    grid-area: statistici;
+}
+
+#site {
+    grid-area: site;
+}
+
+#evenimente {
+    grid-area: evenimente;
+}
+
+#tabel {
+    grid-area: tabel;
+}
+
+#anunturi {
+    grid-area: anunturi;
+}
+
+#diverse {
+    grid-area: diverse;
+}
+
 
 @media screen and (max-width:1200px){
 
     html{
         font-size: 15px;
+        transition: all 1s linear;
     }
 
     #grid-pagina{
         grid-template-columns: repeat(2,1fr);
-        grid-template-areas: "welcome  welcome"
-                             "promotii promotii"
+        grid-template-areas: "welcome welcome welcome"
+                             "welcome welcome welcome"
+                             "utilizatori "
                              "orar orar"
                              "fig1 produse "
                              "fig2 produse "
@@ -90,6 +131,7 @@ html{
 
     html{
         font-size: 12px;
+        transition: all 1s linear;
     }
 
     #grid-pagina{

@@ -4,10 +4,6 @@ body {
     padding-left: var(--spatiere);
     padding-right: var(--spatiere);
 }
-p{
-    color:red;
-    border:1px solid var(--culoare1);
-}
 h2{
     background-color: var(--culoare1);
 }
