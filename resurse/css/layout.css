@@ -4,137 +4,84 @@ html{
     font-weight: 400;
     font-style: normal;
 }
-/*
-
 #grid-pagina{
     display: grid;
-    gap: 10px;
-    grid-template-columns: repeat(3, 1fr); /Modificați numărul de coloane de la 4 la 3 
-    grid-template-areas: 
-        "welcome welcome welcome"
-        "utilizatori statistici site"
-        "evenimente evenimente tabel"
-        "anunturi anunturi anunturi"
-        "diverse diverse diverse";
-}
-
-
-
-#grid-pagina>*{
-    outline: 2px solid var(--culoare1);
-    padding: 1em;
-}
-
-#grid-pagina>figure{
-    margin: 0;
-}
-
-
-#welcome{
-    grid-area: welcome;
-}
-#utilizatori{
-    grid-area: utilizatori;
-}
-#anunturi{
-    grid-area: anunturi;
-}
-#site{
-    grid-area: site;
-}
- 
-#statistici{
-    grid-area: statistici;
-}
-#evenimente{
-    grid-area: evenimente;
-}
-#tabel{
-    grid-area: tabel;
-}
-#diverse{
-    grid-area: diverse;
-}
-*/#grid-pagina {
-    display: grid;
     gap: 5px;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas:
-        "welcome welcome welcome welcome"
-        "welcome welcome welcome welcome"
-        "utilizatori statistici statistici site"
-        "evenimente evenimente tabel tabel"
-        "anunturi anunturi tabel tabel"
-        "diverse diverse diverse diverse";
+    grid-template-columns:repeat(4,1fr);
+    grid-template-areas:"welcome welcome welcome welcome"
+                        "welcome welcome welcome welcome"
+                        "utilizatori statistici statistici site"
+                        "evenimente evenimente tabel tabel"
+                        "anunturi anunturi tabel tabel"
+                        "diverse diverse diverse diverse";
 }
-
-#grid-pagina > * {
-    padding: 1em;
-    outline: 2px solid var(--culoare1);
-}
-
-#welcome {
-    grid-area: welcome;
-}
-
-#utilizatori {
-    grid-area: utilizatori;
-}
-
-#statistici {
-    grid-area: statistici;
-}
-
-#site {
-    grid-area: site;
-}
-
-#evenimente {
-    grid-area: evenimente;
-}
-
-#tabel {
-    grid-area: tabel;
-}
-
-#anunturi {
-    grid-area: anunturi;
-}
-
-#diverse {
-    grid-area: diverse;
-}
-
-
-@media screen and (max-width:1200px){
-
-    html{
-        font-size: 15px;
-        transition: all 1s linear;
+#grid-pagina > *{
+        padding: 1em;
+        outline: 2px solid var(--culoare1);
     }
-
-    #grid-pagina{
-        grid-template-columns: repeat(2,1fr);
-        grid-template-areas: "welcome welcome welcome"
-                             "welcome welcome welcome"
-                             "utilizatori "
-                             "orar orar"
-                             "fig1 produse "
-                             "fig2 produse "
-                             "fig3 produse "
-                             "index-intrebari index-intrebari "
-                             "anunturi anunturi ";
+    
+    #welcome {
+        grid-area: welcome;
     }
-}
-
-@media screen and (max-width:800px){
-
-    html{
-        font-size: 12px;
-        transition: all 1s linear;
+    
+    #utilizatori {
+        grid-area: utilizatori;
     }
-
-    #grid-pagina{
-        display: block;
+    
+    #statistici {
+        grid-area: statistici;
     }
-}
+    
+    #site {
+        grid-area: site;
+    }
+    
+    #evenimente {
+        grid-area: evenimente;
+    }
+    
+    #tabel {
+        grid-area: tabel;
+    }
+    
+    #anunturi {
+        grid-area: anunturi;
+    }
+    
+    #diverse {
+        grid-area: diverse;
+    }
+    
+    
+    @media screen and (max-width:1200px){
+    
+        html{
+            font-size: 15px;
+            transition: all 1s linear;
+        }
+    
+        #grid-pagina{
+            grid-template-columns: repeat(2,1fr);
+            grid-template-areas: "welcome welcome welcome"
+                                 "welcome welcome welcome"
+                                 "utilizatori "
+                                 "orar orar"
+                                 "fig1 produse "
+                                 "fig2 produse "
+                                 "fig3 produse "
+                                 "index-intrebari index-intrebari "
+                                 "anunturi anunturi ";
+        }
+    }
+    
+    @media screen and (max-width:800px){
+    
+        html{
+            font-size: 12px;
+            transition: all 1s linear;
+        }
+    
+        #grid-pagina{
+            display: block;
+        }
+    }

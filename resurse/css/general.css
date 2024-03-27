@@ -57,6 +57,7 @@ body{
     border-spacing:0px;
     border-collapse:collapse;
   }
+  
   #tabel th,#tabel td{
     border:3px solid var(--culoare-text);
   }
@@ -100,7 +101,7 @@ body{
 
   .container-iframe{
     display: flex;
-    flex-direction:row-reverse;
+    flex-direction:column;
 
       display: flex;
       justify-content: center; /* pentru a centra pe orizontală */
@@ -110,7 +111,7 @@ body{
 
   .taburi-iframe{
     display:flex;
-    flex-direction:column-reverse;
+    flex-direction:row-reverse;
     justify-content:flex; /*le muta jos*/
   }
   .taburi-iframe>a{
@@ -124,7 +125,7 @@ body{
     margin-bottom:0;
   }
   #welcome, #utilizatori, #statistici, #site, #evenimente, #anunturi, #diverse {
-    border: 2px solid var(--culoare-text); 
+   
     padding: 0.5em; 
     margin-bottom: 5px;
     margin-top: 5px;
